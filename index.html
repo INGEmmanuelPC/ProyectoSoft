@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú de Software de Anotaciones</title>
+  <link rel="stylesheet" href="design.css"> <!-- Especificado que el recurso enlazado es una hoja de estilo CSS. -->
+</head>
+<body>
+  <nav class="menu">
+    <ul>
+      <li>
+        <a href="#" title="Acceder a Cuenta">
+          <img src="/ProyectoSoft/Images/ImageUserAccount.png" alt="Foto de perfil"><!-- alt = Texto de contexto de la imágen en caso de no cargar, o para el SEO. -->
+        </a>
+      </li>
+        <li>
+        <a href="#" title="Configuración">
+          <img src="/ProyectoSoft/Images/UserSettings.png" alt="Imágen de Configuración">
+        </a>
+      </li>
+      <li>
+        <a href="#" title="Papelera">
+          <img src="/ProyectoSoft/Images/Trash.png" alt="Imágen de Papelera"><!-- alt = Texto de contexto de la imágen en caso de no cargar, o para el SEO. -->
+        </a>
+      </li>
+      <li>
+          <form class="palabra" action="/Búsqueda" method="get">Buscar por palabra:
+            <input type="text" name="query" placeholder="Contenido de Anotación">
+              <button 
+                type="submit">Buscar
+              </button>
+          </form>
+      </li>
+      <li>
+        <form class="fecha">Buscar por fecha:
+          <label for="fecha">
+          </label>
+          <input type="date" name="fecha">
+          <input type="submit" value="Buscar">
+        </form>
+      </li>
+    </ul>
+  </nav>
+  <div>
+    <h1 class="título-bienvenida">
+      <br>
+      <br>
+      <br>
+      Bienvenido a Recallendearch 
+    </h1>
+    <h2 class="título-bienvenida">
+      Plataforma de Agenda con Búsqueda eficiente de Anotaciones.
+    </h2>
+  </div>
+</body>
+</html>
+
+<!-- - Ctrl + / commentary transforming
+- Shift + Alt + ^ = copy-paste the line
+- Ctrl + , = get settings 
+- Ctrl + \ = split the code sections
+- Alt + ^ = move line code-->
