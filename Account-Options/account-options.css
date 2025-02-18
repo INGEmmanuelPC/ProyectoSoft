@@ -1,0 +1,80 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', serif;
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
+/* Contenedor del menú */
+.menu {
+  background-color: #6ffded;
+  display: flex; /* Diseño responsivo (contenedor flexible) */
+  padding: 26px 30px; /* Espacio entre el contenido del elemento y su borde */
+}
+/* Lista de elementos del menú */
+.menu ul {
+  list-style: none; /*Para quitar los guiones de cada punto.*/
+  margin: 0; /*Esto no hace nada*/
+  padding: 0; /*Esto no hace nada*/
+  display: flex; /*Para alinear cada <a>*/
+  font-size: 1.1em;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+.menu ul a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.option {
+  margin: 0px 80px 0px 60px;
+
+}
+
+.return-home {
+  margin: 0px 0px 0p 0px;
+}
+
+#enter-account {
+  margin: 0px 0px 0px 300px;
+}
+
+a:hover {
+  transition: background-color 0.3s ease;
+  background-color: #0ff1d7fe;
+}
+
+.content {
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: flex-start; /* Centrar verticalmente */
+  position: relative;
+}
+
+.profile-image {
+  height: 25rem;
+  border-radius: 60%;
+  box-shadow: rgba(46, 169, 240, 0.4) 5px 5px, rgba(46, 140, 240, 0.3) 10px 10px, rgba(46, 149, 240, 0.2) 15px 15px, rgba(46, 104, 240, 0.1) 20px 20px, rgba(46, 75, 240, 0.05) 25px 25px;
+  margin-top: 4rem;
+}
+
+.profile-name {
+  display: flex;
+  margin-top: 2%;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  background-color: rgb(177, 255, 249);
+}
+
+.profile-name p h2 {
+  margin-top: -10rem;
+}
+
+

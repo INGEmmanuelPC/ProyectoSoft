@@ -1,0 +1,79 @@
+/*Característica por default*/
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', serif;
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+}
+/* Contenedor del menú */
+.menu {
+  background-color: #6ffded;
+  display: flex; /* Diseño responsivo (contenedor flexible) */
+  padding: 26px 30px; /* Espacio entre el contenido del elemento y su borde */
+}
+/* Lista de elementos del menú */
+.menu ul {
+  list-style: none; /*Para quitar los guiones de cada punto.*/
+  margin: 0; /*Esto no hace nada*/
+  padding: 0; /*Esto no hace nada*/
+  display: flex; /*Para alinear cada <a>*/
+  font-size: 1.1em;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+.menu ul a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover {
+  transition: background-color 0.3s ease;
+  background-color: #0ff1d7fe;
+}
+
+.welcome-title {
+  margin-left: 180px;
+}
+
+.settings {
+  margin: 0px 0px 0px 36px; /*Margen izquierdo y derecho*/
+  
+}
+
+.house-image{
+  margin: 0px 0px 0px 170px;
+} 
+
+.note-creation{
+  margin: 0px 0px 0px 80px; 
+}
+
+.note-searching{
+  margin: 0px 0px 0px 280px; 
+}
+
+.content{background-color: rgb(177, 255, 249);
+  
+  height: 600px; /* Ajusta la altura*/
+}
+
+.footer{
+  background-color: #6ffded;
+}
+
+/*
+.menu img{
+
+}
+*/
+
+/* .menu a:focus { 
+  outline: 2px solid #0080ff //Para evitar que elemento se superpongan si la pantalla es pequeña
+} */
