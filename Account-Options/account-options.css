@@ -14,20 +14,28 @@ body {
 
 /* Contenedor del menú */
 .menu {
-  background-color: #6ffded;
+  background-color: #6492d7;
   display: flex; /* Diseño responsivo (contenedor flexible) */
   padding: 26px 30px; /* Espacio entre el contenido del elemento y su borde */
 }
 
 /* Lista de elementos del menú */
 .menu ul {
-  list-style: none; /*Para quitar los guiones de cada punto.*/
-  margin: 0; /*Esto no hace nada*/
-  padding: 0; /*Esto no hace nada*/
-  display: flex; /*Para alinear cada <a>*/
+  list-style: none; /* Para quitar los guiones de cada punto */
+  margin: 0; /* Esto no hace nada */
+  padding: 0; /* Esto no hace nada */
+  display: flex; /* Para alinear cada <a> */
   font-size: 1.1em;
   justify-content: center; /* Centrar horizontalmente */
   align-items: center; /* Centrar verticalmente */
+}
+
+/* Estilos para las imágenes de iconos */
+.menu img {
+  width: 50px;  /* Tamaño fijo */
+  height: 50px;
+  object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+  border-radius: 50%; /* Opcional: para hacerlos circulares */
 }
 
 .menu ul a {
@@ -49,7 +57,7 @@ body {
 
 a:hover {
   transition: background-color 0.3s ease;
-  background-color: #0ff1d7fe;
+  background-color: #3d5e5afe;
 }
 
 .content {
