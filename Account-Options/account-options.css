@@ -1,4 +1,4 @@
-* { 
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -11,12 +11,14 @@ body {
   min-height: 100dvh;
   grid-template-rows: auto 1fr auto;
 }
+
 /* Contenedor del menú */
 .menu {
   background-color: #6ffded;
   display: flex; /* Diseño responsivo (contenedor flexible) */
   padding: 26px 30px; /* Espacio entre el contenido del elemento y su borde */
 }
+
 /* Lista de elementos del menú */
 .menu ul {
   list-style: none; /*Para quitar los guiones de cada punto.*/
@@ -35,7 +37,6 @@ body {
 
 .option {
   margin: 0px 80px 0px 60px;
-
 }
 
 .return-home {
@@ -53,8 +54,9 @@ a:hover {
 
 .content {
   display: flex;
+  flex-direction: column; /* Alinea los elementos verticalmente */
   justify-content: center; /* Centrar horizontalmente */
-  align-items: flex-start; /* Centrar verticalmente */
+  align-items: center; /* Centrar verticalmente */
   position: relative;
 }
 
@@ -74,7 +76,12 @@ a:hover {
 }
 
 .profile-name p h2 {
-  margin-top: -10rem;
+  margin-top: 0; /* Elimina el margen negativo */
 }
 
-
+.profile-sign {
+  display: flex; /* Habilita flexbox para centrar */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  margin-top: 20px; /* Espacio entre el nombre y la firma */
+}

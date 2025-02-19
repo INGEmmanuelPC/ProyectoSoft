@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <ul class="menu">
+      <li>
+        <a class="return-home" href="..\Account-Options\account-options.html" title="Home">
+          <img src="" alt="Imágen de casa"><!-- alt = Texto de contexto de la imágen en caso de no cargar, o para el SEO. -->
+        </a>
+      </li>
+    </ul>
+    <div class="register-sign">
+      <p>
+        <h2>
+          Ingreso de Usuario
+        </h2>
+      </p>
+    </div>
+    <content>
+      <form id="miFormulario">
+          <div>
+              <label for="correo">Correo electrónico:</label>
+              <input type="email" id="correo" name="correo" required>
+          </div>
+          <div>
+              <label for="contrasena">Contraseña:</label>
+              <input type="password" id="contrasena" name="contrasena" required>
+          </div>
+          <button type="submit">Enviar</button>
+      </form>
+    </content>
+    <script src="login.js"></script>
+</body>
+</html>
