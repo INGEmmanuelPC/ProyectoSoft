@@ -10,24 +10,22 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0px;
-  background-color: rgb(152, 227, 227)
+  background-image: url("..\Images\FondoPagina.png");
 }
 
 .menu {
-  background-color: #6ffded;
-  display: flex; /* Diseño responsivo (contenedor flexible) */
-  padding: 26px 30px; /* Espacio entre el contenido del elemento y su borde */
+  display: flex;
+  padding: 26px 30px;
 }
 
-/* Lista de elementos del menú */
 .menu ul {
-  list-style: none; /*Para quitar los guiones de cada punto.*/
-  margin: 0; /*Esto no hace nada*/
-  padding: 0; /*Esto no hace nada*/
-  display: flex; /*Para alinear cada <a>*/
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
   font-size: 1.1em;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
+  justify-content: center;
+  align-items: center;
 }
 
 #miFormulario {
@@ -39,8 +37,8 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: white;
-  margin-top: 8rem;
-  
+  margin-top: 5rem;
+  margin-right: 40rem;
 }
 
 #miFormulario div {
@@ -53,12 +51,43 @@ body {
 }
 
 .register-sign {
-  display: flex; /* Habilita Flexbox */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  margin-top: -20px; /* Ajusta este valor para subirlo o bajarlo */
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 500px;
+  width: 1px;
 }
 
 .register-sign h2 {
   margin-top: -200px;
+}
+
+.return-account {
+  display: inline-flex;
+  align-items: center;
+  /*  Ajusta el tamaño de la imagen */
+  width: 20px; /* Ancho deseado */
+  height: 20px; /* Alto deseado */
+  /*  Opcional: Márgenes para separar la imagen del texto */
+  margin-right: 5px; /* Espacio a la derecha de la imagen */
+  /*  Opcional:  Para controlar la alineación vertical del texto con la imagen */
+  vertical-align: middle; /* Alinea el texto al medio verticalmente */
+}
+
+.return-account img {
+  width: 50px;
+  border-radius: 50%;
+  object-fit: contain; /* Ajusta la imagen al contenedor sin distorsionarla y manteniendo su aspecto */
+}
+
+/* Ejemplo de posicionamiento absoluto dentro del formulario */
+.return-account {
+  position: absolute; /* Posicionamiento absoluto */
+  top: 10px; /* Ajusta la posición vertical */
+  left: 10px; /* Ajusta la posición horizontal */
+}
+
+/* Ejemplo de posicionamiento relativo con márgenes */
+.return-account{
+  margin-top: 10px;
+  margin-left: 10px;
 }
