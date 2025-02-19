@@ -12,8 +12,8 @@ body {
   display: grid;
   min-height: 100dvh;
   grid-template-rows: auto 1fr auto;
-  background-image: url("../Images/FondoPagina.png"); /* Ruta corregida */
-  background-size: 100% auto; /* Ajusta la imagen para cubrir toda la pantalla */
+  background-image: url("../Images/FondoPaginaIS.png"); /* Ruta corregida */
+  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
   background-position: center; /* Centra la imagen */
   background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -21,7 +21,7 @@ body {
 
 /* Contenedor del menú */
 .menu {
-  background-color: #505eb5e7;
+  background-color: #6443b961;
   display: flex; /* Diseño responsivo (contenedor flexible) */
   padding: 26px 30px; /* Espacio entre el contenido del elemento y su borde */
 }
@@ -65,7 +65,7 @@ a:hover {
 
 /* Contenedor del contenido */
 .content {
-  background-color: rgba(179, 220, 246, 0.845); /* Fondo semitransparente */
+  background-color: rgba(196, 239, 236, 0.217); /* Fondo semitransparente */
   height: 600px; /* Ajusta la altura */
   padding: 20px;
   border-radius: 10px;
@@ -73,5 +73,5 @@ a:hover {
 }
 
 .footer {
-  background-color:  #8c94ed3d;
+  background-color: #2d167353;
 }
