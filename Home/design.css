@@ -38,26 +38,45 @@ body {
   width: 100%; /* Asegura que ocupa todo el ancho disponible */
 }
 
+/* Estilos para los enlaces del menú */
+.menu ul li a {
+  display: flex;
+  flex-direction: column; /* Coloca la imagen encima del texto */
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+}
+
 /* Estilos para las imágenes de iconos */
 .menu img {
   width: 50px;  /* Tamaño fijo */
   height: 50px;
   object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
   border-radius: 50%; /* Opcional: para hacerlos circulares */
+  transition: transform 0.3s;
 }
 
+.menu img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo para los nombres de los iconos */
+.menu ul li a span {
+  margin-top: 5px; /* Espacio entre la imagen y el texto */
+  font-size: 12px;
+  color: white;
+}
+
+/* Estilos para la imagen de la empresa */
 .company-image {
   width: 50px;  
   height: 50px;  
   object-fit: cover;  
-  border-radius: 50%; /* Opcional si quieres que sea circular */
+  border-radius: 50%;
 }
 
-.menu ul a {
-  text-decoration: none;
-  display: inline-block;
-}
-
+/* Estilos de los enlaces */
 a:hover {
   transition: background-color 0.3s ease;
   background-color: #8c94ed3d;
@@ -72,6 +91,7 @@ a:hover {
   margin: 20px;
 }
 
+/* Pie de página */
 .footer {
   background-color:  #8c94ed3d;
 }
