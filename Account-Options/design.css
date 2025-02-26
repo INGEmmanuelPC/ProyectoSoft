@@ -1,77 +1,71 @@
-/* Característica por default */
-* { 
+/* Reset de estilos */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos generales */
+/* Estructura de la página */
 body {
-  margin: 0;
-  font-family: 'Trebuchet MS', serif;
-  display: grid;
-  min-height: 100dvh;
-  grid-template-rows: auto 1fr auto;
-  background-image: url("../Images/FondoPaginaIS.png"); /* Ruta corregida */
-  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-}
-
-/* Contenedor del menú */
-.menu {
-  background-color: #6443b961;
-  display: flex; /* Diseño responsivo (contenedor flexible) */
-  padding: 26px 30px; /* Espacio entre el contenido del elemento y su borde */
-}
-
-/* Lista de elementos del menú */
-.menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  font-family: 'Trebuchet MS', sans-serif;
   display: flex;
-  font-size: 1.1em;
-  justify-content: space-evenly; /* Distribuye los elementos con el mismo espacio */
-  align-items: center;
-  width: 100%; /* Asegura que ocupa todo el ancho disponible */
+  flex-direction: column;
+  height: 100vh;
+  background-image: url("../Images/FONDOPAGINAWEB.png"); /* Fondo */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
-/* Estilos para las imágenes de iconos */
-.menu img {
-  width: 50px;  /* Tamaño fijo */
-  height: 50px;
-  object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
-  border-radius: 50%; /* Opcional: para hacerlos circulares */
-}
-
-.company-image {
-  width: 50px;  
-  height: 50px;  
-  object-fit: cover;  
-  border-radius: 50%; /* Opcional si quieres que sea circular */
-}
-
-.menu ul a {
-  text-decoration: none;
-  display: inline-block;
-}
-
-a:hover {
-  transition: background-color 0.3s ease;
-  background-color: #8c94ed3d;
-}
-
-/* Contenedor del contenido */
-.content {
-  background-color: rgba(196, 239, 236, 0.217); /* Fondo semitransparente */
-  height: 600px; /* Ajusta la altura */
+.menu {
+  background-color: #f5e6ca; /* Beige claro */
   padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #3d2b1f;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.note-input {
+  width: 80%;
+  height: 300px;
+  padding: 10px;
+  font-size: 1.2em;
+  border: 2px solid #b08a66;
   border-radius: 10px;
-  margin: 20px;
+  background-color: #fff8f0;
+  color: #3d2b1f;
+}
+
+.save-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #d4af37; /* Dorado elegante */
+  color: #3d2b1f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.save-button:hover {
+  background-color: #b08a66;
 }
 
 .footer {
-  background-color: #2d167353;
+  background-color: #2a1a10;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
 }

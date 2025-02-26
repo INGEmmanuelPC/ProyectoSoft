@@ -1,59 +1,60 @@
-/* Característica por default */
-* { 
+/* ===================== */
+/* Reset y Defaults      */
+/* ===================== */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos generales */
+/* ===================== */
+/* Estilos Generales     */
+/* ===================== */
 body {
-  margin: 0;
   font-family: 'Trebuchet MS', serif;
   display: grid;
   min-height: 100dvh;
   grid-template-rows: auto 1fr auto;
-  background-image: url("../Images/FondoPagina.png"); /* Ruta corregida */
-  background-size: 100% auto; /* Ajusta la imagen para cubrir toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-image: url("../Images/FONDOPAGINAWEB.png");
+  background-size: 100% auto;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
-/* Contenedor del menú */
+/* ===================== */
+/* Menú de Navegación    */
+/* ===================== */
 .menu {
-  background-color: #505eb5e7;
-  display: flex; /* Diseño responsivo (contenedor flexible) */
-  padding: 26px 30px; /* Espacio entre el contenido del elemento y su borde */
+  background-color: #f5e1a4; /* Amarillo claro */
+  display: flex;
+  padding: 26px 30px;
 }
 
-/* Lista de elementos del menú */
 .menu ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   font-size: 1.1em;
-  justify-content: space-evenly; /* Distribuye los elementos con el mismo espacio */
+  justify-content: space-evenly;
   align-items: center;
-  width: 100%; /* Asegura que ocupa todo el ancho disponible */
+  width: 100%;
 }
 
-/* Estilos para los enlaces del menú */
 .menu ul li a {
   display: flex;
-  flex-direction: column; /* Coloca la imagen encima del texto */
+  flex-direction: column;
   align-items: center;
   text-decoration: none;
-  color: white;
+  color: #333; /* Gris oscuro */
   font-size: 14px;
 }
 
-/* Estilos para las imágenes de iconos */
+/* Estilos de las imágenes en el menú */
 .menu img {
-  width: 50px;  /* Tamaño fijo */
+  width: 50px;
   height: 50px;
-  object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
-  border-radius: 50%; /* Opcional: para hacerlos circulares */
+  object-fit: cover;
+  border-radius: 50%;
   transition: transform 0.3s;
 }
 
@@ -61,37 +62,98 @@ body {
   transform: scale(1.1);
 }
 
-/* Estilo para los nombres de los iconos */
 .menu ul li a span {
-  margin-top: 5px; /* Espacio entre la imagen y el texto */
+  margin-top: 5px;
   font-size: 12px;
-  color: white;
+  color: #222; /* Texto más oscuro para mayor contraste */
 }
 
-/* Estilos para la imagen de la empresa */
+/* ===================== */
+/* Imagen de la Empresa  */
+/* ===================== */
 .company-image {
-  width: 50px;  
-  height: 50px;  
-  object-fit: cover;  
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
   border-radius: 50%;
 }
 
-/* Estilos de los enlaces */
+/* ===================== */
+/* Hover en enlaces      */
+/* ===================== */
 a:hover {
   transition: background-color 0.3s ease;
-  background-color: #8c94ed3d;
+  background-color: #d4af37; /* Dorado tenue */
 }
 
-/* Contenedor del contenido */
+/* ===================== */
+/* Contenido Principal   */
+/* ===================== */
 .content {
-  background-color: rgba(179, 220, 246, 0.845); /* Fondo semitransparente */
-  height: 600px; /* Ajusta la altura */
+  background-color: rgba(250, 250, 210, 0.70); /* Amarillo pastel con transparencia */
+  height: 600px;
   padding: 20px;
   border-radius: 10px;
   margin: 20px;
 }
 
-/* Pie de página */
+/* ===================== */
+/* Pie de Página         */
+/* ===================== */
 .footer {
-  background-color:  #8c94ed3d;
+  background-color: #d4af37;
+}
+
+/* ===================== */
+/* Menú Desplegable      */
+/* ===================== */
+.dropdown {
+  position: relative;
+}
+
+/* Ocultar menú desplegable por defecto */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff5cc; /* Amarillo claro */
+  border-radius: 5px;
+  padding: 0;
+  min-width: 220px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 100;
+}
+
+/* Mostrar menú cuando se haga clic */
+.dropdown-menu.show {
+  display: block;
+}
+
+/* Opciones del menú */
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu li a {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  text-decoration: none;
+  color: #333; /* Texto oscuro */
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Íconos en las opciones */
+.dropdown-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Hover en opciones del menú */
+.dropdown-menu li a:hover {
+  background-color: #d4af37; /* Dorado más intenso */
+  color: white;
 }

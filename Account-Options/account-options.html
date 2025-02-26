@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Account Options</title>
-  <link rel="stylesheet" href="account-options.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Options</title>
+    <link rel="stylesheet" href="account-options.css">
 </head>
 <body>
-  <script src="account-options.js">
-  </script>
-  <nav class="menu">
-    <ul>
-      <li>
-        <a class="return-home" href="..\Home\index.html" title="Home">
-          <img src="..\Images\Casa.png" alt="Imágen de casa"><!-- alt = Texto de contexto de la imágen en caso de no cargar, o para el SEO. -->
-        </a>
-      </li>
-      <li>
-        <a class="option" href="..\Login\login.html" id="enter-account" title="Ingresar Cuenta">
-          <img src="..\Images\ImagenUsuario.png" alt="Imágen de usuario desconocido"><!-- alt = Texto de contexto de la imágen en caso de no cargar, o para el SEO. -->
-        </a>
-      </li>
-      <li>
-        <a class="option" href="..\Register\register.html" title="Registrar Cuenta">
-          <img src="..\Images\Agregar.png" alt="Imágen de usuario con símbolo de +"><!-- alt = Texto de contexto de la imágen en caso de no cargar, o para el SEO. -->
-        </a>
-      </li>
-    </ul>
-  </nav>
-  <div class="profile-sign">
-    <p>
-      <h2>Perfil del Usuario</h2>
-    </p>
-  </div>
-  <div class="content">
-    <img class="profile-image" src="..\Images\Perfil.png" alt="Imágen de Cuenta Actual">
-  </div>
-  <div class="profile-name">
-    <p>
-      <h2>Cristiano Ronaldo Dos Santos Aveiro</h2>
-    </p>
-  </div>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a class="menu-item" href="..\Home\index.html" title="Home">
+                    <img src="..\Images\Casa.png" alt="Imágen de casa">
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a class="menu-item" href="..\Login\login.html" title="Ingresar Cuenta">
+                    <img src="..\Images\ImagenUsuario.png" alt="Imágen de usuario desconocido">
+                    <span>Ingresar</span>
+                </a>
+            </li>
+            <li>
+                <a class="menu-item" href="..\Register\register.html" title="Registrar Cuenta">
+                    <img src="..\Images\Agregar.png" alt="Imágen de usuario con símbolo de +">
+                    <span>Registrar</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="profile-container">
+        <div class="profile-image-container">
+            <img class="profile-image" src="..\Images\Perfil.png" alt="Imágen de Cuenta Actual">
+        </div>
+        <div class="profile-name">
+            <h2>Cristiano Ronaldo Dos Santos Aveiro</h2>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Opciones de Cuenta. Todos los derechos reservados.</p>
+    </footer>
 </body>
 </html>
