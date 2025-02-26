@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Nota con Recordatorio</title>
+    <link rel="stylesheet" href="crearNotaRecordatorio.css">
+</head>
+<body>
+    <div class="header-container">
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a class="note-creation" href="#" title="Creación">
+                        <span>CREAR NOTA CON RECORDATORIO</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="body-container">
+        <div class="content">
+            <h1 class="welcome-title">Crear Nota con Recordatorio</h1>
+            
+            <label for="nombreNota" style="display: block; text-align: center; margin-top: 10px;">Nombre de la Nota:</label>
+            <input type="text" id="nombreNota" placeholder="Nombre de la nota" style="width: 90%; padding: 10px; margin: 10px auto; display: block; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;">
+            
+            <textarea id="notaTexto" placeholder="Escribe tu nota aquí..." style="width: 90%; height: 200px; padding: 10px; margin: 10px auto; display: block; border: 1px solid #ccc; border-radius: 5px; font-size: 16px;"></textarea>
+
+            <label for="fechaRecordatorio" style="display: block; text-align: center; margin-top: 10px;">Selecciona la fecha de recordatorio:</label>
+            <input type="date" id="fechaRecordatorio" style="display: block; margin: 10px auto; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+            <button id="guardarNota" style="display: block; margin: 20px auto; padding: 10px 20px; background-color: #d4af37; color: white; border: none; border-radius: 5px; cursor: pointer;">Guardar Nota con Recordatorio</button>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer">
+            <ul>
+                <li>
+                    <span>Recordatorios Efectivos con Recallendearch</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="crearNotaRecordatorio.js"></script>
+</body>
+</html>

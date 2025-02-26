@@ -1,100 +1,99 @@
+/* ===================== */
+/* Reset y Defaults       */
+/* ===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
-body {
-  margin: 0;
-  font-family: 'Trebuchet MS', serif;
-  display: grid;
-  min-height: 100dvh;
-  grid-template-rows: auto 1fr auto;
-  background-image: url("../Images/FondoPagina.png"); /* Ruta corregida */
-  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-}
-
-/* Contenedor del menú */
-.menu {
-  background-color: #505eb5e7;
-  display: flex; /* Diseño responsivo (contenedor flexible) */
-  padding: 26px 30px; /* Espacio entre el contenido del elemento y su borde */
-}
-
-/* Lista de elementos del menú */
-.menu ul {
-  list-style: none; /* Para quitar los guiones de cada punto */
-  margin: 0; /* Esto no hace nada */
-  padding: 0; /* Esto no hace nada */
-  display: flex; /* Para alinear cada <a> */
-  font-size: 1.1em;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-}
-
-/* Estilos para las imágenes de iconos */
-.menu img {
-  width: 50px;  /* Tamaño fijo */
-  height: 50px;
-  object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
-  border-radius: 50%; /* Opcional: para hacerlos circulares */
-}
-
-.menu ul a {
-  text-decoration: none;
-  display: inline-block;
-}
-
-.option {
-  margin: 0px 80px 0px 60px;
-}
-
-.return-home {
-  margin: 0px 0px 0p 0px;
-}
-
-#enter-account {
-  margin: 0px 0px 0px 300px;
-}
-
-a:hover {
-  transition: background-color 0.3s ease;
-  background-color: #3d5e5afe;
-}
-
-.content {
+/* ===================== */
+/* Diseño General         */
+/* ===================== */
+html, body {
+  height: 100vh;
   display: flex;
-  flex-direction: column; /* Alinea los elementos verticalmente */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  position: relative;
+  flex-direction: column;
+  background-image: url("../Images/FONDOPAGINAWEB.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* ===================== */
+/* Menú de Navegación     */
+/* ===================== */
+.menu {
+  background-color: #f5e6ca;
+  padding: 10px 20px;
+  border-bottom: 3px solid #b08a66;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #3d2b1f;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li {
+  margin: 0 25px; /* Aumentado el margen para separar más los iconos */
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #3d2b1f;
+}
+
+.menu img {
+  width: 45px; /* Ligeramente más grande */
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+
+/* ===================== */
+/* Perfil del Usuario     */
+/* ===================== */
+.profile-container {
+  text-align: center;
+  margin: 40px 0; /* Aumentado el margen */
+}
+
+.profile-image-container {
+  width: 200px; /* Más grande */
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
 }
 
 .profile-image {
-  height: 25rem;
-  border-radius: 60%;
-  box-shadow: rgba(46, 169, 240, 0.4) 5px 5px, rgba(46, 140, 240, 0.3) 10px 10px, rgba(46, 149, 240, 0.2) 15px 15px, rgba(46, 104, 240, 0.1) 20px 20px, rgba(46, 75, 240, 0.05) 25px 25px;
-  margin-top: 4rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.profile-name {
-  display: flex;
-  margin-top: 2%;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  background-color: #505eb5e7;
+.profile-name h2 {
+  font-size: 2rem; /* Más grande */
 }
 
-.profile-name p h2 {
-  margin-top: 0; /* Elimina el margen negativo */
-}
-
-.profile-sign {
-  display: flex; /* Habilita flexbox para centrar */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  margin-top: 20px; /* Espacio entre el nombre y la firma */
+/* ===================== */
+/* Pie de Página          */
+/* ===================== */
+.footer {
+  background-color: #2a1a10;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: auto;
 }
