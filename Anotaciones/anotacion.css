@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', serif;
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: auto 1fr auto;
+  background-image: url("../Images/FondoPagina.png"); /* Ruta corregida */
+  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  overflow: hidden; /* Elimina scroll general */
+}
+
+/* Contenedor del menú */
+.menu {
+  background-color: #505eb5e7;
+  display: flex; /* Diseño responsivo (contenedor flexible) */
+  padding: 15px 30px; /* Espacio entre el contenido del elemento y su borde */
+}
+
+/* Lista de elementos del menú */
+.menu ul {
+  list-style: none; /* Para quitar los guiones de cada punto */
+  margin: 0; /* Esto no hace nada */
+  padding: 0; /* Esto no hace nada */
+  display: flex; /* Para alinear cada <a> */
+  font-size: 1.1em;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+/* Estilos para las imágenes de iconos */
+.menu img {
+  width: 50px;  /* Tamaño fijo */
+  height: 50px;
+  object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
+  border-radius: 50%; /* Opcional: para hacerlos circulares */
+}
+
+.menu ul a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.option {
+  margin: 0px 80px 0px 60px;
+}
+
+.return-home {
+  margin: 0px 0px 0p 0px;
+}
+
+#enter-account {
+  margin: 0px 0px 0px 300px;
+}
+
+a:hover {
+  transition: background-color 0.3s ease;
+  background-color: #3d5e5afe;
+}
+
+.content {
+  display: flex;
+  flex-direction: row; /* Cambiado de column a row */
+  justify-content: center;
+  align-items: flex-start; /* Alinea elementos en la parte superior */
+  gap: 50px; /* Espacio entre los dos bloques */
+  padding: 20px;
+  height: 100vh;  
+  flex: 1;
+}
+
+.contenedor-principal {
+  display: flex;
+  height: 100vh;
+}
+
+.menu-lateral {
+  width: 180px;
+  height: 100vh;
+  background-color: #f0f0f0;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  position: relative; /* Añadido para posicionar el botón dentro */
+  right: 520px;
+  bottom: 20px;
+}
+
+.menu-lateral.oculto, .menu-lateral.visible, .menu-toggle {
+  background-color: #505eb5e7;
+}
+
+.menu-lateral.oculto {
+  transform: translateX(-100%);
+  position: relative;
+}
+
+.menu-lateral.visible {
+  transform: translateX(0);
+}
+
+.menu-toggle {
+  /* Estilos para el botón */
+  position: absolute; /* Posiciona el botón dentro del menú lateral */
+  left: 180px; /* Ajusta la posición horizontal para que esté "pegado" */
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  padding: 20px;
+  position: relative;
+}
+
+#trashAction, #moveAction, #dateAction {
+  width: 90px;
+  margin-left: 30px;
+  margin-top: 8px;
+}
+
+#configAction {
+  width: 38px;
+  height: 35px;
+}
+
+#configAction:hover {
+  transition: background-color 0.3s ease;
+  transform: scale(1.1);
+}
+
+#trashAction img, #moveAction img, #dateAction img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+#trashAction span, #moveAction span, #dateAction span {
+  font-size: 0.8rem;
+  color: white;
+}
+
+#trashAction:hover, #moveAction:hover, #dateAction:hover {
+  background-color: blue;
+  transition: background-color 0.3s ease;
+  transform: translateY(-2px);
+}
+
+.dropdown-content a#trashAction, .dropdown-content a#moveAction, .dropdown-content a#dateAction {
+  display: flex; /* Hacemos que el <a> sea un contenedor Flexbox */
+  flex-direction: column; /* Alineamos los elementos verticalmente */
+  align-items: center; /* Centramos los elementos horizontalmente */
+  text-decoration: none; /* Opcional: Elimina el subrayado del enlace */
+}
+
+.dropdown-content a#trashAction span {
+  /* Estilos opcionales para el span */
+}
+
+.dropdown-content a#trashAction img, .dropdown-content a#moveAction img, .dropdown-content a#dateAction img {
+  /* Estilos opcionales para la imagen */
+  margin-top: 10px; /* Espacio entre el span y la imagen */
+}
+
+#nombreAnotacion {
+  width: 250px; /* Ancho de 300 píxeles */
+  height: 30px; /* Alto de 150 píxeles */
+  font-size: 30px;
+}
+
+#infoAnotacion {
+  width: 600px; /* Ancho de 300 píxeles */
+  height: 80px; /* Alto de 150 píxeles */
+  font-size: 8px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Química</title>
+  <link rel="stylesheet" href="anotacion.css">
+</head>
+<body>
+  <nav class="menu">
+    <ul>
+      <li>
+        <a class="return-home" href="..\Home\index.html" title="Home">
+          <span>Home</span>
+          <img src="..\Images\Casa.png" alt="Imágen de casa">
+        </a>
+      </li>
+      <li>
+        <a class="option" href="..\note-searching\searching-options.html" id="enter-account" title="Ingresar Cuenta">
+          <span>Búsqueda de Notas</span>
+          <img src="..\Images\ImagenUsuario.png" alt="Imágen de usuario desconocido">
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="content">
+    <div class="menu-lateral oculto">
+      <button class="menu-toggle">
+        <img id="configAction" src="..\images\OpcionesAnotacion.jpg"></button>
+      <div class="dropdown-content">
+          <a id="trashAction" href="#">
+            <span>Eliminar Nota</span>
+            <img src="../Images/EliminarAnotacion.jpg">
+          </a>
+          <a id="moveAction" href="#">
+            <span>Mover Nota de Carpeta</span>
+            <img src="../Images/MoverAnotacionCarpeta.jpg">
+          </a>
+          <a id="dateAction" href="#">
+            <span>Configurar Fecha</span>
+            <img src="../Images/EditarCalendario.jpg">
+          </a>
+          <a id="dateAction" href="#">
+            <span>Configurar Alarma</span>
+            <img src="../Images/EditarAlarma.jpg">
+          </a>
+      </div>
+    </div>
+    <form>
+      <label for="nombre">Nombre:</label><br>
+      <input type="text" id="nombreAnotacion" name="nombre" value="Literatura"><br><br>
+      <label for="mensaje" id="infoAnotacion">Mensaje:</label><br>
+      <textarea id="mensaje" name="mensaje">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto obcaecati doloremque, ducimus cupiditate ex culpa! Autem repudiandae officia tenetur ex aspernatur facere perspiciatis natus modi nemo rerum. Magni, possimus earum.</textarea><br><br>
+    </form>
+  </div>
+  <script src="anotacion.js"></script>
+</body>
+</html>

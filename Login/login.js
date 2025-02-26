@@ -1,5 +1,5 @@
 const formulario = document.getElementById('miFormulario');
-
+    
 formulario.addEventListener('submit', function(event) {
     event.preventDefault(); // Evita que se recargue la página
 

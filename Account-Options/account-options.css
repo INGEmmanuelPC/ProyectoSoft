@@ -98,3 +98,8 @@ a:hover {
   align-items: center; /* Centrar verticalmente */
   margin-top: 20px; /* Espacio entre el nombre y la firma */
 }
+
+.return-home:hover{
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
