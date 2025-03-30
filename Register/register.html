@@ -1,45 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Registro de Usuario</title>
     <link rel="stylesheet" href="register.css">
 </head>
 <body>
-    <ul class="menu">
-      <a class="return-account" href="..\Account-Options\account-options.html" title="Cuenta">
-        <img src="..\Images\ImagenUsuario.png" alt="Imágen de casa"><!-- alt = Texto de contexto de la imágen en caso de no cargar, o para el SEO. -->
-      </a>
-    </ul>
-    <div class="register-sign">
-      <p>
-        <h2>
-          Registro de Usuario
-        </h2>
-      </p>
+    <div class="container">
+        <div class="register-box">
+            <a class="return-account" href="../Account-Options/account-options.html" title="Cuenta">
+                <img src="../Images/ImagenUsuario.png" alt="Imagen de usuario">
+            </a>
+            <h2>Registro de Usuario</h2>
+            <form id="miFormulario">
+                <div class="input-group">
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="input-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" id="contrasena" name="contrasena" required>
+                </div>
+                <div class="input-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="input-group">
+                    <label for="telefono">Nombre de Usuario:</label>
+                    <input type="text" id="usuario" name="telefono">
+                </div>
+
+                <!-- Botones de redes sociales -->
+                <div class="social-login">
+                    <button type="button" class="social-btn google">
+                        <img src="../Images/LogoGoogle.png" alt="Google" width="20"> Iniciar sesión con Google
+                    </button>
+                    <button type="button" class="social-btn facebook">
+                        <img src="../Images/LogoFacebook.png" alt="Facebook" width="20"> Iniciar sesión con Facebook
+                    </button>
+                    <button type="button" class="social-btn instagram">
+                        <img src="../Images/LogoInstagram.png" alt="Instagram" width="20"> Iniciar sesión con Instagram
+                    </button>
+                </div>
+
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+        </div>
     </div>
-    <content>
-      <form id="miFormulario">
-          <div>
-              <label for="correo">Correo electrónico:</label>
-              <input type="email" id="correo" name="correo" required>
-          </div>
-          <div>
-              <label for="contrasena">Contraseña:</label>
-              <input type="password" id="contrasena" name="contrasena" required>
-          </div>
-          <div>
-              <label for="nombre">Nombre de usuario:</label>
-              <input type="text" id="nombre" name="nombre">
-          </div>
-          <div>
-              <label for="telefono">Número de Teléfono:</label>
-              <input type="tel" id="telefono" name="telefono">
-          </div>
-          <button type="submit">Enviar</button>
-      </form>
-    </content>
+
     <script src="register.js"></script>
 </body>
 </html>

@@ -1,35 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INICIO DE SESIÓN</title>
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <ul class="menu">
-      <a class="return-account" href="..\Account-Options\account-options.html" title="Cuenta">
-        <img src="..\Images\ImagenUsuario.png" alt="Imágen de casa"><!-- alt = Texto de contexto de la imágen en caso de no cargar, o para el SEO. -->
-      </a>
-    </ul>
-    <div class="register-sign">
-      <p>
-        <h2>
-          Ingreso de Usuario
-        </h2>
-      </p>
+  <nav>
+    <a class="return-account" href="../Account-Options/account-options.html" title="CUENTA">
+      <img src="../Images/ImagenUsuario.png" alt="IMAGEN DE USUARIO">
+    </a>
+  </nav>
+  <div class="container">
+    <div class="login-box">
+      <h2>BIENVENIDO</h2>
+      <p>INICIA SESIÓN PARA CONTINUAR</p>
+      
+      <form id="miFormulario">
+        <div class="input-group">
+          <label for="correo">CORREO ELECTRÓNICO</label>
+          <input type="email" id="correo" name="correo" required>
+        </div>
+        
+        <div class="input-group">
+          <label for="contrasena">CONTRASEÑA</label>
+          <input type="password" id="contrasena" name="contrasena" required>
+        </div>
+        
+        <button type="submit" class="btn-submit">INICIAR SESIÓN</button>
+        
+        <div class="extra-links">
+          <a href="#">¿OLVIDASTE TU CONTRASEÑA?</a>
+          <a href="#">CREAR UNA CUENTA</a>
+        </div>
+      </form>
     </div>
-    <form id="miFormulario">
-        <div>
-            <label for="correo">Correo electrónico:</label>
-            <input type="email" id="correo" name="correo" required>
-        </div>
-        <div>
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required>
-        </div>
-        <button type="submit">Enviar</button>
-    </form>
-    <script src="login.js"></script>
+  </div>
+  <script src="login.js"></script>
 </body>
 </html>
+
+<!-- Si está en la base de datos se responde como lo debido.
+  Es importante no tener contraseñas en la base de datos en formato texto plano (contraseña123 por ejemplo).
+  El cifrado se hace desde el backend o front para la contraseña.
+  
+  Se va a simular una inserción.
+  En el inspector del navegador, en Network; dentro del Payboard estamos viendo los datos que se están pasando,
+  y recordar que la contraseña no debería mostrarse:
+  Con la máquina o host estás conectado a la red wifi ("equisde" se llama), y en el compu por dentro simula que es un router.
+  En el computador el software captura todo el formulario HTTP, entonces en el compu tenemos user y password (campos ya introducidos)
+  Luego de darle enter la compu camptura la info, y luefo va al router luego a la nube y luego un retorno de la info.
+  El backend que es un servidor entre la compu y los campos enviados (frontend).
+  
+  
+  Imaginemos que somos un usuario que quiere entrar a una red social como Bancolombia; pasa que yo 
+  desde frontend; pero pasa que realmente no es bancolombia; este ataque se conoce como Fishing; empezando 
+  como usuario ingresando los datos y resulta ser el servidor de alguien más, no de Bancolombia.
+  Entonces la información o datos se cifra antes de ser enviados al servidor; es que posteriormente hacen redirección al
+  verdadero facebook, y así el usuario no se entera.
+
+  
+  Para hacer una conexión a nuestro login: 
+
+-->

@@ -77,11 +77,6 @@ a:hover {
   flex: 1;
 }
 
-.contenedor-principal {
-  display: flex;
-  height: 100vh;
-}
-
 .menu-lateral {
   width: 180px;
   height: 100vh;
@@ -89,7 +84,7 @@ a:hover {
   transition: transform 0.3s ease-in-out;
   transform: translateX(-100%);
   position: relative; /* Añadido para posicionar el botón dentro */
-  right: 520px;
+  right: 476px;
   bottom: 20px;
 }
 
@@ -100,6 +95,7 @@ a:hover {
 .menu-lateral.oculto {
   transform: translateX(-100%);
   position: relative;
+  margin-left: 210px;
 }
 
 .menu-lateral.visible {

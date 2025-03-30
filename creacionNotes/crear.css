@@ -8,7 +8,7 @@
 
 /* Fondo de la página */
 body {
-    background-image: url("../Images/FondoPagina.png"); 
+    background-image: url("../Images/FONDOPAGINAWEB.png"); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -21,7 +21,7 @@ body {
 
 /* Menú de navegación */
 .menu {
-    background-color: rgba(80, 94, 181, 0.9);
+    background-color: rgba(204, 186, 50, 0.9);
     padding: 15px;
     width: 100%;
     text-align: center;

@@ -1,63 +1,107 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="design.css"> <!-- Especificado que el recurso enlazado es una hoja de estilo CSS. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="design.css">
 </head>
 <body>
-  <nav class="menu">  
-    <ul>
-      <li>
-        <a class="account-options" href="..\Account-Options\account-options.html" title="Cuenta">
-          <img src="..\Images\ImagenUsuario.png" alt="Imágen de usuario">
-          <span>Cuenta</span>
-        </a>
-      </li>
-      <li>
-        <a class="settings" href="..\config\setting-options.html" title="Configuración">
-          <img src="..\Images\Configuracion.png" alt="Imágen de Configuración">
-          <span>Configuración</span>
-        </a>
-      </li>
-      <li>
-        <a class="home" href="" title="Inicio">
-          <img class="house-image" src="..\Images\Casa.png" alt="Imágen de Casa">
-          <span>Inicio</span>
-        </a>
-      </li>
-      <li>
-        <a class="note-searching" href="..\note-searching\searching-options.html" title="Búsqueda">
-          <img src="..\Images\Busqueda.png" alt="Imágen de lupa">
-          <span>Búsqueda</span>
-        </a>      
-      </li>
-      <li>
-        <a class="note-creation" href="..\creacionNotes\crear.html" title="Creación">
-          <img src="..\Images\Libreta.png" alt="Imágen de Libreta">
-          <span>Creación</span>
-        </a>      
-      </li>
-    </ul>
-  </nav>
-  <div class="content">
-    <h1 class="welcome-title">
-      <br>
-      <br>
-      <br>
-      Bienvenido a Recallendearch 
-    </h1>
-    <h3 class="welcome-title">
-      Plataforma de Agenda con Búsqueda eficiente de Anotaciones.
-    </h3>
-  </div>
-  <div class="footer">
-    <ul>
-      <li>
-        <img class="company-image" src="..\Images\Logotipo.png" alt="Imágen de Empresa">
-      </li>
-    </ul>
-  </div>
+    <nav class="menu">
+        <ul>
+            <li>
+                <a class="account-options" href="../Account-Options/account-options.html" title="Cuenta">
+                    <img src="../Images/ImagenUsuario.png" alt="Imagen de usuario">
+                    <span>CUENTA</span>
+                </a>
+            </li>
+            <li>
+                <a class="settings" href="" title="Configuración">
+                    <img src="../Images/Configuracion.png" alt="Imagen de Configuración">
+                    <span>CONFIGURACIÓN</span>
+                </a>
+            </li>
+            <li>
+                <a class="home" href="" title="Inicio">
+                    <img class="house-image" src="../Images/Casa.png" alt="Imagen de Casa">
+                    <span>INICIO</span>
+                </a>
+            </li>
+            <li>
+                <a class="note-searching" href="../note-searching/searching-options.html" title="Búsqueda">
+                    <img src="../Images/Busqueda.png" alt="Imagen de lupa">
+                    <span>BÚSQUEDA</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a class="note-creation" href="#" title="Creación" id="dropdownToggle">
+                    <img src="../Images/Libreta.png" alt="Imagen de Libreta">
+                    <span>CREACIÓN</span>
+                </a>
+                <ul class="dropdown-menu" id="dropdownMenu">
+                    <li>
+                        <a href="#">
+                            <img src="..\Images\CrearCarpeta.jpg" alt="Icono Crear Carpeta" class="dropdown-icon">
+                            <span>CREAR CARPETA</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="..\creacionNotes\crear.html">
+                            <img src="../Images/CrearNotaNormal.jpg" alt="Icono Crear Nota Normal" class="dropdown-icon">
+                            <span>CREAR NOTA NORMAL</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="..\creacionNotes\crear.html">
+                            <img src="../Images/CrearRecordatorio.jpg" alt="Icono Crear Nota con Recordatorio" class="dropdown-icon">
+                            <span>CREAR NOTA CON RECORDATORIO</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1 class="welcome-title">
+            <br><br><br>
+            Bienvenido a AGENDAY
+            <button onclick="onGetData()" >
+                Botonsito
+            </button>
+        </h1>
+        <h3 class="welcome-title">
+            Plataforma de Agenda con Búsqueda eficiente de Anotaciones.
+        </h3>
+    </div>
+
+    <div class="footer">
+        <ul>
+            <li>
+                <img class="company-image" src="../Images/Logotipo.png" alt="Imagen de Empresa">
+            </li>
+        </ul>
+    </div>
+
+    <script src="scripts.js">
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const dropdownToggle = document.getElementById('dropdownToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        dropdownMenu.style.display = 'none'; // Ocultar al cargar la página
+
+        dropdownToggle.addEventListener('click', function(event) {
+            event.preventDefault();
+            dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.style.display = 'none';
+            }
+        });
+        });
+    </script>
 </body>
-</html>
+</html>"

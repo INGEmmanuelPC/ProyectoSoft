@@ -1,130 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Options</title>
-    <link rel="stylesheet" href="searching-options.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Opciones de Cuenta y Búsqueda</title>
+  <link rel="stylesheet" href="searching-options.css">
 </head>
 <body>
+  <!-- Header sofisticado -->
+  <header>
+    <div class="header-content">
+      <h1>Organiza y Explora tus Notas</h1>
+      <p>Descubre un mundo de conocimiento con estilo</p>
+    </div>
+  </header>
+
+  <!-- Menú de navegación -->
   <nav class="menu">
-      <ul>
-        <li>
-          <a class="return-home" href="..\Home\index.html" title="Home">
-            <img src="..\Images\Casa.png" alt="Imágen de casa">
-          </a>
-        </li>
-        <li>
-          <a class="option" href="..\Login\login.html" id="enter-account" title="Ingresar Cuenta">
-            <img src="..\Images\ImagenUsuario.png" alt="Imágen de usuario desconocido">
-          </a>
-        </li>
-        <li>
-          <a class="option" href="..\Register\register.html" title="Registrar Cuenta">
-            <img src="..\Images\Agregar.png" alt="Imágen de usuario con símbolo de +">
-          </a>
-        </li>
-      </ul>
+    <ul>
+      <li>
+        <a class="return-home" href="..\Home\index.html" title="Home">
+          <img src="..\Images\Casa.png" alt="Icono de casa">
+        </a>
+      </li>
+      <li>
+        <a class="option" href="..\Login\login.html" id="enter-account" title="Ingresar Cuenta">
+          <img src="..\Images\ImagenUsuario.png" alt="Icono de usuario">
+        </a>
+      </li>
+      <li>
+        <a class="option" href="..\Register\register.html" title="Registrar Cuenta">
+          <img src="..\Images\Agregar.png" alt="Icono de agregar usuario">
+        </a>
+      </li>
+    </ul>
   </nav>
-  <div class="content">
-    <div class="content-searching">
-      <button id="CSButton">
-        <span>Búsqueda por Contenido</span><br>
-        <img src="..\Images\BusquedaDocumento.jpg" alt="Imágen de la Opción de Búsqueda por Contenido">
-      </button>
-      <div id="block-content-cs" class="hidden">
-        <div class="buscador">
+
+  <!-- Contenido principal -->
+  <main class="content">
+    <div class="search-buttons">
+      <div class="button-container content-searching">
+        <button id="CSButton">
+          <span>Búsqueda por Contenido</span>
+          <img src="..\Images\BusquedaDocumento.jpg" alt="Búsqueda por Contenido">
+        </button>
+        <div id="block-content-cs" class="hidden dropdown">
+          <div class="buscador">
             <input type="text" placeholder="Contenido o palabra...">
-            <button id="searchButton">&#x1F50D;
-            </button>
+            <button class="search-btn">&#x1F50D;</button>
+          </div>
+          <div class="links-container">
+            <a href="..\Anotaciones\anotacion-quimica.html">Química [20/02/2025]</a>
+            <a href="..\Anotaciones\anotacion-fisica.html">Física [09/03/2025] &#x1F514;</a>
+            <a href="..\Anotaciones\anotacion-sociales.html">Sociales</a>
+            <a href="..\Anotaciones\anotacion-matematicas.html">Matemáticas</a>
+            <a href="..\Anotaciones\anotacion-biologia.html">Biología</a>
+            <a href="..\Anotaciones\anotacion-historia.html">Historia [07/03/2025] &#x1F514;</a>
+            <a href="..\Anotaciones\anotacion-geografia.html">Geografía</a>
+            <a href="..\Anotaciones\anotacion-literatura.html">Literatura</a>
+            <a href="..\Anotaciones\anotacion-filosofia.html">Filosofía [25/02/2025]</a>
+            <a href="..\Anotaciones\anotacion-ingles.html">Inglés [12/03/2025] &#x1F514;</a>
+          </div>
         </div>
-        <div class="links-container">
-          <a href="..\Anotaciones\anotacion-quimica.html">Química [20/02/2025]</a>
-          <a href="..\Anotaciones\anotacion-fisica.html">Física [09/03/2025] &#x1F514;</a>
-          <a href="..\Anotaciones\anotacion-sociales.html">Sociales</a>
-          <a href="..\Anotaciones\anotacion-matematicas.html">Matemáticas</a>
-          <a href="..\Anotaciones\anotacion-biologia.html">Biología</a>
-          <a href="..\Anotaciones\anotacion-historia.html">Historia [07/03/2025] &#x1F514;</a>
-          <a href="..\Anotaciones\anotacion-geografia.html">Geografía</a>
-          <a href="..\Anotaciones\anotacion-literatura.html">Literatura</a>
-          <a href="..\Anotaciones\anotacion-filosofia.html">Filosofía [25/02/2025]</a>
-          <a href="..\Anotaciones\anotacion-ingles.html">Inglés [12/03/2025] &#x1F514;</a>
+      </div>
+
+      <div class="button-container folder-searching">
+        <button id="FSButton">
+          <span>Búsqueda por Carpetas</span>
+          <img src="..\Images\BusquedaCarpeta.jpg" alt="Búsqueda por Carpetas">
+        </button>
+        <div id="block-content-fs" class="hidden dropdown">
+          <div class="buscador">
+            <input type="text" placeholder="Nombre de carpeta...">
+            <button class="search-btn">&#x1F50D;</button>
+          </div>
+          <div class="links-container">
+            <a id="cont-fold-favo" href="#">[Notas Favoritas &#10084]</a>
+            <a id="cont-fold-trash" href="#">[Notas Eliminadas &#128465;]</a>
+            <a id="cont-fold-sci" href="#">Ciencias exactas</a>
+            <a id="cont-fold-human" href="#">Humanidades</a>
+            <a id="cont-fold-lang" href="#">Lenguas</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container new-searching">
+        <button id="NS1Button">
+          <span>Búsqueda por Fecha</span>
+          <img src="..\Images\BusquedaAlmanaque.jpg" alt="Búsqueda por Fecha">
+        </button>
+        <div id="block-content-ns1" class="hidden dropdown">
+          <div class="buscador">
+            <input type="text" placeholder="Nombre de nota...">
+            <button class="search-btn">&#x1F50D;</button>
+          </div>
+          <div class="links-container">
+            <a href="..\Anotaciones\anotacion-quimica.html">Química [20/02/2025]</a>
+            <a href="..\Anotaciones\anotacion-fisica.html">Física [09/03/2025] &#x1F514;</a>
+            <a href="..\Anotaciones\anotacion-historia.html">Historia [07/03/2025] &#x1F514;</a>
+            <a href="..\Anotaciones\anotacion-filosofia.html">Filosofía [25/02/2025]</a>
+            <a href="..\Anotaciones\anotacion-ingles.html">Inglés [12/03/2025] &#x1F514;</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container another-searching">
+        <button id="NS2Button">
+          <span>Búsqueda por Recordatorio</span>
+          <img src="..\Images\BusquedaRecordatorio.jpg" alt="Búsqueda por Recordatorio">
+        </button>
+        <div id="block-content-ns2" class="hidden dropdown">
+          <div class="buscador">
+            <input type="text" placeholder="Nombre de nota...">
+            <button class="search-btn">&#x1F50D;</button>
+          </div>
+          <div class="links-container">
+            <a href="..\Anotaciones\anotacion-fisica.html">Física [09/03/2025] &#x1F514;</a>
+            <a href="..\Anotaciones\anotacion-historia.html">Historia [07/03/2025] &#x1F514;</a>
+            <a href="..\Anotaciones\anotacion-ingles.html">Inglés [12/03/2025] &#x1F514;</a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="folder-searching">
-      <button id="FSButton">
-        <span>Búsqueda por Carpetas</span><br>
-        <img src="..\Images\BusquedaCarpeta.jpg" alt="Imágen de la Opción de Búsqueda por Carpeta">
-      </button>
-      <div id="block-content-fs" class="hidden">
-        <div class="buscador">
-          <input type="text" placeholder="Nombre de carpeta...">
-          <button id="searchButton">&#x1F50D;</button>
-        </div>
-        <div class="links-container">
-          <a id="cont-fold-favo" href="#">[Notas Favoritas &#10084]</a>
-          <a id="cont-fold-trash" href="#">[Notas Eliminadas &#128465;]</a>
-          <a id="cont-fold-sci" href="#">Ciencias exactas</a>
-          <a id="cont-fold-human" href="#">Humanidades</a>
-          <a id="cont-fold-lang" href="#">Lenguas</a>
-        </div>
-      </div>
+  </main>
+
+  <!-- Footer extendido -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+      <p>Creado con pasión y dedicación</p>
     </div>
-    <div id="links-folder-noteFavo">
-      <input type="text" placeholder="Contenido o palabra...">
-      <button id="searchButton">&#x1F50D;</button>
-      <div class="links-container">
-        <a href="..\Anotaciones\anotacion-matematicas.html">Matemáticas</a>
-        <a href="..\Anotaciones\anotacion-ingles.html">Inglés [12/03/2025] &#x1F514;</a>
-      </div>
-    </div>
-    <div id="links-folder-noteScien">
-      <input type="text" placeholder="Contenido o palabra...">
-      <button id="searchButton">&#x1F50D;</button>
-      <div class="links-container">
-        <a href="..\Anotaciones\anotacion-quimica.html">Química [20/02/2025]</a>
-        <a href="..\Anotaciones\anotacion-fisica.html">Física [09/03/2025] &#x1F514;</a>
-        <a href="..\Anotaciones\anotacion-matematicas.html">Matemáticas</a>
-      </div>
-    </div>
-    <div class="new-searching">  
-      <button id="NS1Button">
-        <span>Búsqueda por Fecha</span><br>
-        <img src="..\Images\BusquedaAlmanaque.jpg" alt="Imágen de la Opción de Búsqueda por Fecha">
-      </button>
-      <div id="block-content-ns1" class="hidden">
-        <div class="buscador">
-          <input type="text" placeholder="Nombre de nota...">
-          <button id="searchButton">&#x1F50D;</button>
-        </div>
-        <div class="links-container">
-          <a href="..\Anotaciones\anotacion-quimica.html">Química [20/02/2025]</a>
-          <a href="..\Anotaciones\anotacion-fisica.html">Física [09/03/2025] &#x1F514;</a>
-          <a href="..\Anotaciones\anotacion-historia.html">Historia [07/03/2025] &#x1F514;</a>
-          <a href="..\Anotaciones\anotacion-filosofia.html">Filosofía [25/02/2025]</a>
-          <a href="..\Anotaciones\anotacion-ingles.html">Inglés [12/03/2025] &#x1F514;</a>
-        </div>
-      </div>
-    </div>
-    <div class="another-searching"> 
-      <button id="NS2Button">
-        <span>Búsqueda por Recordatorio</span><br>
-        <img src="..\Images\BusquedaRecordatorio.jpg" alt="Imágen de la Opción de Búsqueda por Recordatorio">
-      </button>
-      <div id="block-content-ns2" class="hidden">
-        <div class="buscador">
-          <input type="text" placeholder="Nombre de nota...">
-          <button id="searchButton">&#x1F50D;</button>
-        </div>
-        <div class="links-container">
-          <a href="..\Anotaciones\anotacion-fisica.html">Física [09/03/2025] &#x1F514;</a>
-          <a href="..\Anotaciones\anotacion-historia.html">Historia [07/03/2025] &#x1F514;</a>
-          <a href="..\Anotaciones\anotacion-ingles.html">Inglés [12/03/2025] &#x1F514;</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  </footer>
+
   <script src="searching-options.js"></script>
 </body>
 </html>

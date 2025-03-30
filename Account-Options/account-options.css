@@ -5,101 +5,143 @@
 }
 
 body {
-  margin: 0;
   font-family: 'Trebuchet MS', serif;
-  display: grid;
-  min-height: 100dvh;
-  grid-template-rows: auto 1fr auto;
-  background-image: url("../Images/FondoPagina.png"); /* Ruta corregida */
-  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(232, 231, 203, 0.281);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-image: url("../Images/FONDOPAGINAWEB.png");
 }
 
-/* Contenedor del menú */
+/* Menú de navegación */
 .menu {
-  background-color: #505eb5e7;
-  display: flex; /* Diseño responsivo (contenedor flexible) */
-  padding: 26px 30px; /* Espacio entre el contenido del elemento y su borde */
+  background-color: #f3ab58e7;
+  padding: 20px;
 }
 
-/* Lista de elementos del menú */
 .menu ul {
-  list-style: none; /* Para quitar los guiones de cada punto */
-  margin: 0; /* Esto no hace nada */
-  padding: 0; /* Esto no hace nada */
-  display: flex; /* Para alinear cada <a> */
-  font-size: 1.1em;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Estilos para las imágenes de iconos */
-.menu img {
-  width: 50px;  /* Tamaño fijo */
-  height: 50px;
-  object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
-  border-radius: 50%; /* Opcional: para hacerlos circulares */
+.menu li {
+  margin: 0 20px;
 }
 
-.menu ul a {
+.menu a {
   text-decoration: none;
-  display: inline-block;
 }
 
-.option {
-  margin: 0px 80px 0px 60px;
-}
-
-.return-home {
-  margin: 0px 0px 0p 0px;
-}
-
-#enter-account {
-  margin: 0px 0px 0px 300px;
-}
-
-a:hover {
-  transition: background-color 0.3s ease;
-  background-color: #3d5e5afe;
-}
-
-.content {
-  display: flex;
-  flex-direction: column; /* Alinea los elementos verticalmente */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  position: relative;
-}
-
-.profile-image {
-  height: 25rem;
-  border-radius: 60%;
-  box-shadow: rgba(46, 169, 240, 0.4) 5px 5px, rgba(46, 140, 240, 0.3) 10px 10px, rgba(46, 149, 240, 0.2) 15px 15px, rgba(46, 104, 240, 0.1) 20px 20px, rgba(46, 75, 240, 0.05) 25px 25px;
-  margin-top: 4rem;
-}
-
-.profile-name {
-  display: flex;
-  margin-top: 2%;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  background-color: #505eb5e7;
-}
-
-.profile-name p h2 {
-  margin-top: 0; /* Elimina el margen negativo */
-}
-
-.profile-sign {
-  display: flex; /* Habilita flexbox para centrar */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  margin-top: 20px; /* Espacio entre el nombre y la firma */
-}
-
-.return-home:hover{
-  transform: scale(1.1);
+.menu img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
   transition: transform 0.3s;
+}
+
+.menu img:hover {
+  transform: scale(1.1);
+}
+
+/* Título del perfil */
+.profile-sign {
+  text-align: center;
+  margin: 20px 0;
+  color: #ffffff;
+  background-color: rgba(235, 135, 53, 0.9);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* Contenedor global para centrar el contenido */
+.container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor principal en dos columnas */
+.profile-container {
+  width: 90%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Columna izquierda: imagen y nombre alineados verticalmente */
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Aumentamos el tamaño de la imagen */
+.profile-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 40%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 1);
+  transition: transform 0.3s;
+  margin-bottom: 15px;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+}
+
+/* Se ajusta el tamaño y estilo del nombre */
+.profile-name {
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: rgba(235, 135, 53, 0.9);
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Columna derecha: contenedor de opciones de cuenta */
+.profile-right {
+  width: 100%;
+  max-width: 500px;
+  background-color: rgba(217, 211, 205, 0.977);
+  padding: 30px;
+  border-radius: 10px;
+  color: #060606;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.profile-right h3 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Botones de opciones con mayor tamaño */
+.profile-button {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 18px;
+  color: #0b0b0b;
+  background-color: #ffba66fd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.profile-button:hover {
+  background-color: #e0993f;
+  transform: scale(1.03);
 }

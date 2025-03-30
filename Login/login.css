@@ -1,99 +1,131 @@
+/* Reset y configuración base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 body {
+  background: linear-gradient(135deg, #2C3E50, #4CA1AF);
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  margin: 0px;
-  background-image: url("..\Images\FondoPagina.png");
+  position: relative;
 }
 
-.menu {
-  display: flex;
-  padding: 26px 30px;
-}
-
-.menu ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  font-size: 1.1em;
-  justify-content: center;
-  align-items: center;
-}
-
-#miFormulario {
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: white;
-  margin-top: 5rem;
-  margin-right: 40rem;
-}
-
-#miFormulario div {
-  margin-bottom: 10px;
-}
-
-#miFormulario label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.register-sign {
-  align-items: center;
-  margin-top: 50px;
-  margin-left: 500px;
-  width: 1px;
-}
-
-.register-sign h2 {
-  margin-top: -200px;
-}
-
-.return-account {
-  display: inline-flex;
-  align-items: center;
-  /*  Ajusta el tamaño de la imagen */
-  width: 20px; /* Ancho deseado */
-  height: 20px; /* Alto deseado */
-  /*  Opcional: Márgenes para separar la imagen del texto */
-  margin-right: 5px; /* Espacio a la derecha de la imagen */
-  /*  Opcional:  Para controlar la alineación vertical del texto con la imagen */
-  vertical-align: middle; /* Alinea el texto al medio verticalmente */
+/* Ícono de usuario */
+nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .return-account img {
-  width: 50px;
+  width: 65px;
   border-radius: 50%;
-  object-fit: contain; /* Ajusta la imagen al contenedor sin distorsionarla y manteniendo su aspecto */
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Ejemplo de posicionamiento absoluto dentro del formulario */
-.return-account {
-  position: absolute; /* Posicionamiento absoluto */
-  top: 10px; /* Ajusta la posición vertical */
-  left: 10px; /* Ajusta la posición horizontal */
-}
-
-/* Ejemplo de posicionamiento relativo con márgenes */
-.return-account{
-  margin-top: 10px;
-  margin-left: 10px;
-
-}
-
-.return-account:hover{
+.return-account:hover img {
   transform: scale(1.1);
-  transition: transform 0.3s;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Contenedor principal */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+/* Caja de inicio de sesión */
+.login-box h2 {
+  font-size: 2.5em;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  color: #ddd;
+  margin-bottom: 25px;
+  font-size: 1.1em;
+}
+
+/* Estilos del formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.input-group label {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 1em;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+}
+
+/* Botón */
+.btn-submit {
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #FF416C, #FF4B2B);
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover {
+  background: linear-gradient(45deg, #FF4B2B, #FF416C);
+  transform: scale(1.05);
+}
+
+/* Enlaces extras */
+.extra-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.extra-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+.extra-links a:hover {
+  color: #FFC371;
+  text-decoration: underline;
 }

@@ -28,8 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const newNote = {
             title,
             content,
-            date: new Date().toLocaleString()
+            date_time: new Date()
         };
+        
+        guardarNota(newNote);
+
         notes.push(newNote);
         localStorage.setItem("notes", JSON.stringify(notes));
 
@@ -42,3 +45,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     loadNotes();
 });
+
+const url = 'http://127.0.0.1:3000/api/v1';
+guardarNota = async (note) => {
+    
+    
+    try {
+        const response = await fetch(`${url}/notes/create`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(note)
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Respuesta del servidor:', data);
+    } catch (error) {
+        console.error('Error:', error);
+    }
+
+}

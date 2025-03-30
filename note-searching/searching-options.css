@@ -1,3 +1,4 @@
+/* Reset y estilos generales */
 * {
   margin: 0;
   padding: 0;
@@ -5,263 +6,189 @@
 }
 
 body {
-  margin: 0;
   font-family: 'Trebuchet MS', serif;
-  display: grid;
-  min-height: 100dvh;
-  grid-template-rows: auto 1fr auto;
-  background-image: url("../Images/FondoPagina.png"); /* Ruta corregida */
-  background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
-  background-position: center; /* Centra la imagen */
-  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  overflow: hidden; /* Elimina scroll general */
+  min-height: 100vh;
+  background-image: url("../Images/FONDOPAGINAWEB.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Contenedor del menú */
+/* Header sofisticado */
+header {
+  background: linear-gradient(135deg, #d2b48c, #5f5c54);
+  color: #080808;
+  text-align: center;
+  padding: 10px 5px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.header-content h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.header-content p {
+  font-size: 1.5em;
+}
+
+/* Menú de navegación */
 .menu {
-  background-color: #505eb5e7;
-  display: flex; /* Diseño responsivo (contenedor flexible) */
-  padding: 26px 30px; /* Espacio entre el contenido del elemento y su borde */
-}
-
-/* Lista de elementos del menú */
-.menu ul {
-  list-style: none; /* Para quitar los guiones de cada punto */
-  margin: 0; /* Esto no hace nada */
-  padding: 0; /* Esto no hace nada */
-  display: flex; /* Para alinear cada <a> */
-  font-size: 1.1em;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-}
-
-/* Estilos para las imágenes de iconos */
-.menu img {
-  width: 50px;  /* Tamaño fijo */
-  height: 50px;
-  object-fit: cover; /* Mantiene la proporción y recorta si es necesario */
-  border-radius: 50%; /* Opcional: para hacerlos circulares */
-}
-
-.menu ul a {
-  text-decoration: none;
-  display: inline-block;
-}
-
-.option {
-  margin: 0px 80px 0px 60px;
-}
-
-.return-home {
-  margin: 0px 0px 0p 0px;
-}
-
-#enter-account {
-  margin: 0px 0px 0px 300px;
-}
-
-a:hover {
-  transition: background-color 0.3s ease;
-  background-color: #3d5e5afe;
-}
-
-.content {
+  background-color: rgba(244, 218, 104, 0.9);
   display: flex;
-  flex-direction: row; /* Cambiado de column a row */
   justify-content: center;
-  align-items: flex-start; /* Alinea elementos en la parte superior */
-  gap: 50px; /* Espacio entre los dos bloques */
-  padding: 20px;
-  
+  padding: 15px 0;
 }
 
-.profile-image {
-  height: 25rem;
-  border-radius: 60%;
-  box-shadow: rgba(46, 169, 240, 0.4) 5px 5px, rgba(46, 140, 240, 0.3) 10px 10px, rgba(46, 149, 240, 0.2) 15px 15px, rgba(46, 104, 240, 0.1) 20px 20px, rgba(46, 75, 240, 0.05) 25px 25px;
-  margin-top: 4rem;
-}
-
-.profile-name {
+.menu ul {
+  list-style: none;
   display: flex;
-  margin-top: 2%;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  background-color: #505eb5e7;
+  align-items: center;
+  gap: 30px;
 }
 
-.profile-name p h2 {
-  margin-top: 0; /* Elimina el margen negativo */
+.menu img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
 }
 
-.profile-sign {
-  display: flex; /* Habilita flexbox para centrar */
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-  margin-top: 20px; /* Espacio entre el nombre y la firma */
+.menu img:hover {
+  transform: scale(1.1);
 }
 
-#block-content {
-  border: 4px solid #505eb5e7;
-  padding: 10px;
-  margin-top: 10px;
-  height: 200px; /* Altura fija del contenedor */
-  overflow-y: scroll; /* Desbordamiento vertical con barra de desplazamiento */
-  display: flex; /* Para alinear el buscador y el contenido verticalmente */
-  flex-direction: column; /* Para que el buscador esté arriba y el contenido abajo */
+/* Contenido principal centrado horizontalmente */
+main.content {
+  flex: 1;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-buttons {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.button-container {
+  position: relative;
+}
+
+/* Botones */
+button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  padding: 40px;
+  background: rgba(52, 52, 53, 0.9);
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease, background 0.2s ease;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+}
+
+button:hover {
+  background: #edab1d;
+  transform: translateY(-3px);
+}
+
+button span {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+}
+
+button img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Dropdowns */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 320px;
+  max-height: 250px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 100;
+  overflow-y: auto;
+  padding: 15px;
+  border-radius: 12px;
 }
 
 .hidden {
-  display: none !important;
+  display: none;
 }
 
-#CSButton img, #FSButton img {
-  width: 100px; /* Ancho deseado */
-  height: 100px; /* Alto deseado */
-  object-fit: cover; /* Cubre todo el círculo con la imagen */
-  border-radius: 50%; /* Redondea la imagen */
-}
-
-#block-content-cs, #block-content-fs {
-  position: absolute;
-  top: calc(100% + 10px); /* Espacio debajo del botón */
-  left: 0;
-  width: 300px; /* Ancho fijo */
-  max-height: 200px; /* Altura máxima con scroll */
-  background: transparent;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para efecto flotante */
-  z-index: 100;
-  overflow-y: auto; 
-}
-
-/* Estilos para el nuevo bloque de enlaces */
-.links-container {
-  overflow-y: auto; /* Scroll dentro del contenedor de enlaces */
-  max-height: 150px; /* Altura máxima del contenedor */
-  padding: 10px;
-}
-
-#links-folder-noteFavo, #links-folder-noteScien {
-  height: 190px; /* Alto de 150 píxeles */
-  display: none; /* Oculta el menú por defecto */
-  position: absolute; /* Permite posicionar el menú */
-  top: 336px; /* Ajusta la posición vertical */
-  left: 660px; /* Ajusta la posición horizontal */
-  padding: 10px; /* Espacio interno del menú */  
-  max-height: 200px; /* Altura máxima del menú */
-}
-
-.links-container a {
-  display: block; /* Para que los enlaces ocupen todo el ancho */
-  padding: 5px;
-  color: #333;
-  text-decoration: none;
-}
-
-.links-container a:hover {
-  background-color: #eee;
-}
-
-/*Esto se añadió*/
-.content-searching, 
-.folder-searching {
-  position: relative;
-  margin: 0 20px; /* Espacio horizontal entre botones */
-}
-
-.content-searching {
-  position: relative; /* Contenedor de referencia para el posicionamiento absoluto */
-  margin: 20px 0; /* Ajusta márgenes según necesidad */
-}
-
-.folder-searching {
-  margin-left: 50px;
-  margin-top: 20px;
-  color: #505eb5e7;
-}
-
-#CSButton, #FSButton {
+/* Buscador interno */
+.buscador {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px; /* Ancho consistente para botones */
-  padding: 15px;
-  background: #505eb5e7;
-  border: none;
-  border-radius: 8px;
-  transition: transform 0.2s ease;
+  gap: 8px;
+  margin-bottom: 10px;
 }
 
-#CSButton:hover, #FSButton:hover {
+.buscador input {
+  flex: 1;
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.search-btn {
+  padding: 8px 12px;
+  font-size: 15px;
   background: #248ee5;
-  transform: translateY(-2px); /* Efecto de elevación */
-}
-
-#CSButton img, #FSButton img {
-  margin-top: 10px;
-}
-
-.new-searching, .another-searching { /* Estilos para los nuevos bloques */
-  position: relative;
-  margin: 0 20px; /* Espacio horizontal entre botones */
-}
-
-.new-searching {
-  margin-top: 20px; /* Ajusta márgenes según necesidad */
-  margin-right: 50px;
-}
-
-.another-searching {
-  margin-left: 0px;
-  margin-top: 20px;
-  color: #505eb5e7;
-}
-
-button {
+  border: none;
+  border-radius: 6px;
+  color: #fff;
   cursor: pointer;
 }
 
-#NS1Button, #NS2Button { /* Estilos para los nuevos botones */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px; /* Ancho consistente para botones */
-  padding: 15px;
-  background: #505eb5e7;
-  border: none;
-  border-radius: 8px;
-  transition: transform 0.2s ease;
+/* Contenedor de enlaces */
+.links-container {
+  overflow-y: auto;
+  max-height: 150px;
 }
 
-#NS1Button:hover, #NS2Button:hover {
-  background: #248ee5;
-  transform: translateY(-2px); /* Efecto de elevación */
+.links-container a {
+  display: block;
+  padding: 8px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.2s ease;
 }
 
-#NS1Button img, #NS2Button img {
-  margin-top: 10px;
-  width: 100px; /* Ancho deseado */
-  height: 100px; /* Alto deseado */
-  object-fit: cover; /* Cubre todo el círculo con la imagen */
-  border-radius: 50%; /* Redondea la imagen */
+.links-container a:hover {
+  background: #ea8b3e;
 }
 
-#block-content-ns1, #block-content-ns2 { /* Estilos para los nuevos contenidos */
-  position: absolute;
-  top: calc(100% + 10px); /* Espacio debajo del botón */
-  left: 0;
-  width: 300px; /* Ancho fijo */
-  max-height: 200px; /* Altura máxima con scroll */
-  background: transparent;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra para efecto flot*/
+/* Footer extendido y pegado al final */
+footer {
+  background: linear-gradient(135deg, #b8860b, #d2b48c);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  /* Para asegurar que se sitúe al final incluso si el contenido es poco */
+  margin-top: auto;
 }
 
-#cont-fold-favo, #cont-fold-trash {
-  font-weight: bold; /* O font-weight: 700; */
-}
-
-.buscador input, #searchButton, #links-folder-noteFavo input, #links-folder-noteScien input {
-  height: 20px; /* Alto de 150 píxeles */
-  font-size: 15px;
+.footer-content p {
+  margin: 5px 0;
 }

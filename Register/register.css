@@ -1,99 +1,145 @@
+/* Estilos Generales */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  margin: 0px;
-  background-image: url("..\Images\FondoPagina.png");
+  height: 100vh;
+  background: linear-gradient(135deg, #6a85b6, #bac8e0);
 }
 
-.menu {
-  display: flex; /* Diseño responsivo (contenedor flexible) */
-  padding: 26px 30px; /* Espacio entre el contenido del elemento y su borde */
-}
-
-/* Lista de elementos del menú */
-.menu ul {
-  list-style: none; /*Para quitar los guiones de cada punto.*/
-  margin: 0; /*Esto no hace nada*/
-  padding: 0; /*Esto no hace nada*/
-  display: flex; /*Para alinear cada <a>*/
-  font-size: 1.1em;
-  justify-content: center; /* Centrar horizontalmente */
-  align-items: center; /* Centrar verticalmente */
-}
-
-#miFormulario {
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+/* Contenedor Principal */
+.container {
   display: flex;
-  flex-direction: column;
-  width: 300px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: white;
-  margin-top: 8rem;
-  margin-right: 14rem;
-}
-
-#miFormulario div {
-  margin-bottom: 10px;
-}
-
-#miFormulario label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.register-sign {
-  display: flex; /* Habilita Flexbox */
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
-  margin-top: -20px; /* Ajusta este valor para subirlo o bajarlo */
-}
-
-.register-sign h2 {
-  margin-top: -200px;
-}
-
-.return-account {
-  display: inline-flex;
+  justify-content: center;
   align-items: center;
-  /*  Ajusta el tamaño de la imagen */
-  width: 20px; /* Ancho deseado */
-  height: 20px; /* Alto deseado */
-  /*  Opcional: Márgenes para separar la imagen del texto */
-  margin-right: 5px; /* Espacio a la derecha de la imagen */
-  /*  Opcional:  Para controlar la alineación vertical del texto con la imagen */
-  vertical-align: middle; /* Alinea el texto al medio verticalmente */
+  width: 100%;
+  height: 100vh;
 }
 
+/* Caja de Registro */
+.register-box {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 360px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* Estilos de los Campos de Entrada */
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #34495e;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 6px;
+  transition: 0.3s;
+  font-size: 14px;
+}
+
+input:focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 5px rgba(41, 128, 185, 0.5);
+}
+
+/* Botón de Registro */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #2980b9;
+}
+
+/* Estilos para la imagen de regreso a cuenta */
 .return-account img {
   width: 50px;
   border-radius: 50%;
-  object-fit: contain; /* Ajusta la imagen al contenedor sin distorsionarla y manteniendo su aspecto */
-}
-
-/* Ejemplo de posicionamiento absoluto dentro del formulario */
-.return-account {
-  position: absolute; /* Posicionamiento absoluto */
-  top: 10px; /* Ajusta la posición vertical */
-  left: 10px; /* Ajusta la posición horizontal */
-}
-
-/* Ejemplo de posicionamiento relativo con márgenes */
-.return-account{
-  margin-top: 10px;
-  margin-left: 10px;
-}
-
-.return-account:hover{
-  transform: scale(1.1);
+  margin-bottom: 10px;
   transition: transform 0.3s;
+}
+
+.return-account img:hover {
+  transform: scale(1.1);
+}
+
+/* Estilos de Botones de Redes Sociales */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.social-btn img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* Colores de los botones de redes sociales */
+.google {
+  background: #c2c2ca;
+  color: rgb(255, 255, 255);
+}
+
+.facebook {
+  background: #c2c2ca;
+  color: rgb(245, 241, 241);
+}
+
+.instagram {
+  background: #c2c2ca;
+  color: rgb(255, 255, 255);
+}
+
+.social-btn:hover {
+  transform: scale(1.05);
 }

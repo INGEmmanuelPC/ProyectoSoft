@@ -1,45 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Account Options</title>
+  <title>Opciones de Cuenta</title>
   <link rel="stylesheet" href="account-options.css">
 </head>
 <body>
-  <script src="account-options.js">
-  </script>
   <nav class="menu">
     <ul>
       <li>
-        <a class="return-home" href="..\Home\index.html" title="Home">
-          <img src="..\Images\Casa.png" alt="Imágen de casa"><!-- alt = Texto de contexto de la imágen en caso de no cargar, o para el SEO. -->
+        <a class="return-home" href="../Home/index.html" title="Inicio">
+          <img src="../Images/Casa.png" alt="Imagen de casa">
         </a>
       </li>
       <li>
-        <a class="option" href="..\Login\login.html" id="enter-account" title="Ingresar Cuenta">
-          <img src="..\Images\ImagenUsuario.png" alt="Imágen de usuario desconocido"><!-- alt = Texto de contexto de la imágen en caso de no cargar, o para el SEO. -->
+        <a class="option" href="../Login/login.html" id="enter-account" title="Ingresar Cuenta">
+          <img src="../Images/ImagenUsuario.png" alt="Imagen de usuario desconocido">
         </a>
       </li>
       <li>
-        <a class="option" href="..\Register\register.html" title="Registrar Cuenta">
-          <img src="..\Images\Agregar.png" alt="Imágen de usuario con símbolo de +"><!-- alt = Texto de contexto de la imágen en caso de no cargar, o para el SEO. -->
+        <a class="option" href="../Register/register.html" title="Registrar Cuenta">
+          <img src="../Images/Agregar.png" alt="Imagen de usuario con símbolo de +">
         </a>
       </li>
     </ul>
   </nav>
+  
+  <!-- Título del perfil -->
   <div class="profile-sign">
-    <p>
-      <h2>Perfil del Usuario</h2>
-    </p>
+    <h2>Perfil del Usuario</h2>
   </div>
-  <div class="content">
-    <img class="profile-image" src="..\Images\Perfil.png" alt="Imágen de Cuenta Actual">
+  
+  <!-- Contenedor global centrado -->
+  <div class="container">
+    <!-- Contenedor principal en dos columnas -->
+    <div class="profile-container">
+      <!-- Columna izquierda: imagen y nombre -->
+      <div class="profile-left">
+        <img class="profile-image" src="../Images/Perfil.png" alt="Imagen de Cuenta Actual">
+        <h2 class="profile-name">Cristiano Ronaldo Dos Santos Aveiro</h2>
+      </div>
+      <!-- Columna derecha: opciones de cuenta -->
+      <div class="profile-right">
+        <h3>Opciones de Cuenta</h3>
+        <button class="profile-button">Cambiar Foto de Perfil</button>
+        <button class="profile-button">Ver Historial</button>
+        <button class="profile-button">Ajustes</button>
+        <button class="profile-button">Cerrar Sesión</button>
+      </div>
+    </div>
   </div>
-  <div class="profile-name">
-    <p>
-      <h2>Cristiano Ronaldo Dos Santos Aveiro</h2>
-    </p>
-  </div>
+  
 </body>
 </html>
